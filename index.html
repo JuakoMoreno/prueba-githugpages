@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeCounter(_action) {
+            var h2Element = document.getElementById("counter");
+            var currentValue = parseInt(h2Element.innerText);
+            switch (_action) {
+                case 1:
+                    h2Element.innerText = currentValue + 1;
+                    break;
+                case 0:
+                    h2Element.innerText = 0;
+                    break;
+                case -1:
+                    h2Element.innerText = currentValue - 1;
+                    break;
+                default:
+                    console.log("Invalid action");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Hola, World!</h1>
+    <h2 id="counter">0</h2>
+    <h3>
+        <button onclick="changeCounter(1)"> + 1</button>
+        <button onclick="changeCounter(0)"> Reset</button>
+        <button onclick="changeCounter(-1)">- 1</button>
+    </h3>
+    <h4>Joaquin Moreno. 2024</h4>
+</body>
+</html>
